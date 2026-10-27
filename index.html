@@ -1,0 +1,188 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+<title>SERRA — A Sanctuary Within Stone</title><meta name="theme-color" content="#100d0a"/>
+<meta name="description" content="A secluded desert retreat shaped by sandstone, silence, and light. Journey through SERRA, from canyon to sanctuary to the open horizon."/>
+<link rel="icon" href="favicon.svg" type="image/svg+xml"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500&family=Cormorant+Garamond:ital,wght@1,400&display=swap" rel="stylesheet"/>
+<style>
+:root{--background:#100d0a;--foreground:#fffdf8;--card:#342a23;--primary:#d9a588;--primary-foreground:#23180f;--accent:#ab826b;--popover:#30261f;--muted:#3c3027;--muted-foreground:#d6c8bc;--border:#ffffff35;--ring:#f1c9a6;--page-padding:28px;--ease-serra:cubic-bezier(.22,1,.36,1)}
+*{box-sizing:border-box}body{margin:0;background:var(--background);color:var(--foreground);font-family:Inter,sans-serif;-webkit-font-smoothing:antialiased}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}a{color:inherit}
+:focus-visible{outline:2px solid var(--ring);outline-offset:3px}
+.skip{position:fixed;left:12px;top:-60px;z-index:100;background:var(--foreground);color:#100d0a;padding:10px 16px;border-radius:30px;font-size:14px;text-decoration:none}.skip:focus{top:12px}
+.journey{position:relative}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;isolation:isolate}
+.scene,.scene-media{position:absolute;inset:0;width:100%;height:100%}.scene-media{object-fit:cover;transform:scale(1.031)}
+.shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,7,5,.4) 0%,transparent 23%,transparent 45%,rgba(12,8,5,.24) 66%,rgba(12,8,5,.76) 100%)}
+.wm{letter-spacing:.18em;font-weight:450;font-size:11px}.wm.big{font-size:39px;width:186px;text-decoration:none;display:block}
+.hdr{position:fixed;z-index:30;top:22px;left:var(--page-padding);right:var(--page-padding);display:flex;justify-content:space-between;align-items:center;transition:opacity .85s var(--ease-serra),transform .85s var(--ease-serra)}
+.hdr-r{display:flex;gap:8px;align-items:center}
+.capsule{display:flex;gap:2px;padding:4px;border-radius:50px;border:1px solid #ffffff42;background:#ffffff0e;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px)}
+.capsule a{font-size:14px;padding:8px 18px;border-radius:40px;text-decoration:none;transition:background .2s,color .2s}.capsule a.on{background:var(--foreground);color:#23180f}
+.pill{height:43px;padding:0 20px;border-radius:50px;font-size:14px;display:inline-flex;align-items:center;gap:8px;transition:transform .2s,background .2s}.pill:active,.cta:active{transform:scale(.97)}
+.ivory{background:var(--foreground);color:#23180f}.round{width:43px;padding:0;justify-content:center}.ghost{border:1px solid #ffffff70}
+.top-cap{position:absolute;left:var(--page-padding);top:123px;font-size:10px;letter-spacing:.18em;opacity:.8;display:flex;gap:8px;align-items:center}
+.story{position:absolute;inset:0;pointer-events:none}.story>*{pointer-events:auto}
+.story-head{position:absolute;left:var(--page-padding);bottom:32px}
+.eyebrow{display:flex;align-items:center;gap:12px;font-size:10px;letter-spacing:.2em;margin-bottom:27px}.eyebrow i{width:30px;height:1px;background:currentColor;opacity:.7}
+.h{font-weight:400;margin:0;font-size:clamp(58px,6.16vw,94px);line-height:.98;letter-spacing:-.055em;white-space:nowrap}
+.h .l1,.h .l2{display:block}.h .l2{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.13em;line-height:.92;letter-spacing:-.045em;margin-top:6px}
+.w{display:inline-block;will-change:transform,opacity,filter}
+.story-copy{position:absolute;right:var(--page-padding);bottom:35px;width:300px;font-size:16px;line-height:1.45;letter-spacing:-.02em}.story-copy p{margin:0}
+@media(min-width:1500px){.story-copy{width:330px;font-size:18px}}
+.cta{margin-top:25px;display:inline-flex;align-items:center;gap:33px;background:#d6a486;color:var(--primary-foreground);padding:16px 23px;border-radius:50px;font-size:14px;font-weight:500;transition:background .2s,transform .2s}
+.cta svg{transition:transform .2s}.cta:hover{background:#e4b89c}.cta:hover svg{transform:translate(2px,-2px)}
+.tl{margin-top:24px;font-size:12px;display:inline-flex;align-items:center;gap:25px;border-bottom:1px solid #ffffff90;padding-bottom:3px}
+.rail{position:absolute;right:var(--page-padding);top:41%;display:flex;flex-direction:column;gap:10px;align-items:flex-end;transition:opacity .2s}
+.rail button{display:flex;align-items:center;gap:8px;font-size:9px;padding:4px 0}.rail i{display:block;width:4px;height:4px;border-radius:4px;background:#fffdf8aa;transition:height .25s}.rail .on i{height:19px;background:var(--foreground)}
+.scroll-cue{position:absolute;left:50%;top:61%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;font-size:9px;letter-spacing:.2em;opacity:.8}
+.scroll-cue span{width:26px;height:38px;border:1px solid #ffffff80;border-radius:20px;display:grid;place-items:center}
+.progress{position:absolute;left:0;bottom:0;height:2px;width:100%;background:#f5e6d3;transform-origin:left}
+.cards{position:absolute;inset:0;pointer-events:none}.card-slot{position:absolute;width:330px}.s0{left:var(--page-padding);top:22%}.s1{right:var(--page-padding);top:46%}
+.card{position:relative;border-radius:26px;border:1px solid #ffffff40;overflow:hidden;isolation:isolate;padding:24px 25px 28px;box-shadow:0 10px 40px rgba(0,0,0,.12);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px)}
+.card-live{position:absolute;left:-24px;top:-24px;width:calc(100% + 48px);height:calc(100% + 48px);filter:blur(24px);z-index:-2;pointer-events:none}
+.card-tint{position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(125deg,#ffffff20,#ffffff08),#21170e65}
+.card-top{display:flex;justify-content:space-between;align-items:center;font-size:10px;letter-spacing:.18em}.card h3{font-weight:400;font-size:27px;margin:26px 0 12px;letter-spacing:-.03em}.card p{margin:0;font-size:16px;line-height:1.38}
+.loader{position:fixed;inset:0;z-index:60;color:var(--foreground)}.loader-flat{position:absolute;inset:0;background:#a9846b;transition:opacity .01s}.loader-veil{position:absolute;inset:0;width:100%;height:100%}
+.loader-labels{transition:opacity .25s}.loader-labels span{position:absolute}.loader .wm{left:28px;top:26px;font-size:14px}.loader .cap{right:28px;top:28px;font-size:10px;letter-spacing:.18em}
+.pct{left:28px;bottom:30px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(70px,10vw,140px);line-height:1}.msg{right:28px;bottom:36px;font-size:14px}
+.loader-bar{position:absolute;left:0;bottom:0;height:4px;width:100%;background:var(--foreground);transform-origin:left}
+.menu{position:fixed;inset:0;width:100%;height:100%;max-width:none;max-height:none;margin:0;border:0;color:var(--foreground);padding:26px 7vw 28px;background:radial-gradient(ellipse at 0% 100%,#594133 0%,transparent 65%),#251e19;overflow:auto}
+.menu[open]{display:flex;flex-direction:column}.menu::backdrop{background:#251e19}
+.menu-top{display:flex;justify-content:space-between;align-items:center}.menu-top .wm{font-size:28px}
+.menu-body{display:grid;grid-template-columns:1fr 1fr;gap:10%;padding-top:clamp(30px,6vh,64px)}
+.menu .k{font-size:10px;letter-spacing:.2em}.menu h2{font-weight:400;font-size:clamp(48px,5.6vw,84px);line-height:.98;letter-spacing:-.05em;margin:24px 0}.menu h2 em{font-family:'Cormorant Garamond',serif;font-size:1.13em}
+.menu .sm{color:var(--muted-foreground);line-height:1.5}
+.menu nav a{display:grid;grid-template-columns:40px 1fr auto;align-items:center;padding:17px 0 21px;border-bottom:1px solid #ffffff25;text-decoration:none}
+.menu .num{font-size:11px;opacity:.7}.tt b{display:block;font-weight:400;font-size:39px;letter-spacing:-.04em}.tt small{font-size:12px;color:var(--muted-foreground)}
+.menu-foot{margin-top:auto;padding-top:28px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}.menu-foot .cap{font-size:10px;letter-spacing:.18em}
+.menu select{margin-left:10px;background:#ffffff14;color:var(--foreground);border:1px solid #fffdf8a0;border-radius:24px;padding:8px 14px;font-size:12px}.menu select option{color:#000}.menu label{font-size:12px}
+.cursor{position:fixed;inset:0;pointer-events:none;z-index:90;opacity:0;transition:opacity .2s}.cursor.on{opacity:1}
+.dot,.ring{position:absolute;left:0;top:0}.dot i{display:block;width:8px;height:8px;margin:-4px;border-radius:50%;background:var(--foreground)}
+.ring i{display:block;width:36px;height:36px;margin:-18px;border:1px solid #fffdf8aa;border-radius:50%;transition:width .25s,height .25s,margin .25s,background .25s}.ring i.big{width:53px;height:53px;margin:-26.5px;background:#ffffff1a}.ring b{position:absolute;top:34px;left:-18px;font-size:9px;font-weight:400}
+.still{min-height:100vh;background-size:cover;background-position:center;background-attachment:fixed;padding:120px var(--page-padding) 80px}
+.still .note{font-size:13px;color:var(--muted-foreground);margin:0 0 60px}
+.story.flow{position:static;padding:90px 0;display:flex;flex-direction:column;gap:32px}.flow .story-head,.flow .story-copy{position:static;width:auto;max-width:360px}.flow .h{white-space:normal}
+.cards.flow{position:static;display:flex;flex-direction:column;gap:20px;padding:40px 0}.cards.flow .card-slot{position:static;width:min(330px,100%)}
+@media(max-width:1100px){.h{font-size:60px}.story-copy{width:265px}.card-slot{width:300px}.capsule a{font-size:13px;padding:8px 11px}}
+@media(max-width:900px){:root{--page-padding:18px}.capsule{display:none}.wm.big{font-size:32px}
+ .story{display:flex;flex-direction:column;justify-content:flex-end;gap:27px;padding:0 18px 28px}.story-head,.story-copy{position:static;width:auto}.story-copy{max-width:min(320px,90%)}
+ .h{font-size:clamp(48px,7.65vw,70px)}.scroll-cue{top:39%}
+ .menu-body{grid-template-columns:1fr}.menu h2{font-size:44px}.tt b{font-size:31px}.tt small{font-size:11px}.menu .sm,.menu .num{display:none}.menu nav a{grid-template-columns:1fr auto;padding:14px 0 17px}
+ .menu-foot label{width:100%}.menu select{width:100%;margin:8px 0 0}.menu label{display:block}
+ .card-slot{width:calc(100% - 68px);max-width:300px}.card{border-radius:22px}.card h3{font-size:23px}.card p{font-size:14px}.s0{left:18px;top:96px}.s1{right:18px;top:259px}}
+@media(max-width:560px){.menu-txt{display:none}.wm.big{font-size:31px}.hdr{top:20px}.h{font-size:clamp(40px,10.65vw,58px);letter-spacing:-.052em}.h .l2{font-size:1.1em}
+ .story-copy{font-size:15px;line-height:1.45;max-width:305px}.cta{font-size:13px;padding:14px 21px}.top-cap{top:94px;font-size:8px}.rail,.scroll-cue{top:32%}}
+@media(max-width:760px) and (max-height:760px) and (min-width:0){.s0{top:86px}.s1{top:224px}.card{padding:13px 16px 15px}.card h3{font-size:21px}.card p{font-size:13px}}
+@media(max-width:900px) and (max-height:600px){.card-slot{width:calc(50% - 26px)}.s0{left:18px;top:86px}.s1{right:18px;top:86px}.card h3{font-size:19px}.card p{font-size:12px}.top-cap,.scroll-cue{display:none}.menu .menu-intro{display:none}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+.journey{height:250vh;height:250svh}
+.rail{position:fixed;z-index:20}
+.card-live{display:none!important}
+.rail{position:fixed;z-index:20}.stage .story{inset:0}.hdr{opacity:0}.menu:not([open]){display:none}
+.loader-flat{background:#a9846b}.hide{display:none!important}
+</style></head><body>
+<a class="skip" href="#app" id="skip">Skip animation and read the story</a>
+<div class="loader" id="loader" role="status" aria-live="polite"><div class="loader-flat" id="lflat"></div><canvas class="loader-veil" id="lveil" style="opacity:0"></canvas>
+<div class="loader-labels" id="llab"><span class="wm">SERRA</span><span class="cap">A SANCTUARY WITHIN STONE</span><span class="pct" id="lpct">0%</span><span class="msg">Good things take a moment.</span></div><div class="loader-bar" id="lbar" style="transform:scaleX(0)"></div></div>
+<header class="hdr" id="hdr"><a class="wm big" href="#the-place" data-go="0">SERRA</a><div class="hdr-r"><nav class="capsule" id="cap" aria-label="Primary"></nav>
+<button class="pill ivory menu-txt" data-menu>Menu</button><button class="pill ivory round" aria-label="Open menu" data-menu>&#8599;</button></div></header>
+<main id="app" tabindex="-1"></main><div class="rail" id="rail"></div>
+<dialog class="menu" id="menu" aria-label="Navigation"><div class="menu-top"><span class="wm">SERRA</span><button class="pill ghost" id="mclose">Close &#10005;</button></div>
+<div class="menu-body"><div class="menu-intro"><p class="k">AWAY FROM EVERYTHING.</p><h2>Come back<br><em>to yourself.</em></h2><p class="sm">A quieter world awaits.<br>Take your time finding it.</p></div><nav id="mnav"></nav></div>
+<div class="menu-foot"><span class="cap">A SANCTUARY WITHIN STONE</span><button class="pill ghost" id="mstill">Switch to stillness mode</button></div></dialog>
+<div class="cursor" id="cur" aria-hidden="true"><div class="ring" id="ring"><i></i></div><div class="dot" id="dot"><i></i></div></div>
+<noscript><p style="padding:40px">SERRA — A Sanctuary Within Stone. Somewhere beyond. Closer to yourself. Carved by time. Made for stillness. A little further. A little quieter. A world apart. A place within.</p></noscript>
+<script>
+(()=>{
+const clamp=(v,a=0,b=1)=>Math.max(a,Math.min(b,v)),smooth=(a,b,v)=>{const x=clamp((v-a)/(b-a));return x*x*(3-2*x)}
+const C=[
+{id:'the-place',n:'01',label:'The Place',eb:'THE ARRIVAL',l1:'Somewhere beyond.',l2:'Closer to yourself.',copy:'A secluded desert retreat shaped by sandstone, silence, and light. Space to slow down. Room to simply be.',sub:'A sanctuary within stone',x:'cta'},
+{id:'the-stay',n:'02',label:'The Stay',eb:'INTO THE LANDSCAPE',l1:'Carved by time.',l2:'Made for stillness.',copy:'Follow the canyon inward to private stone suites, quiet pools, and open skies. Every detail belongs to the landscape.',sub:'Space to simply be',x:'cont'},
+{id:'experiences',n:'03',label:'Experiences',eb:'BEYOND THE EXPECTED',l1:'A little further.',l2:'A little quieter.',copy:'Beyond the water, the sanctuary unfolds. Follow the light into private spaces, warm stone, and a quieter kind of luxury.',sub:'Beyond the expected'},
+{id:'the-horizon',n:'04',label:'The Horizon',eb:'ROOM TO BREATHE',l1:'A world apart.',l2:'A place within.',copy:'The canyon opens. The horizon stretches. An intimate sanctuary, and a slower way to see the world.',sub:'A world opening up',x:'ret'}]
+const CARDS=[['THE STAY','Stay within stone','Private canyon suites, natural textures, and terraces opening onto the quiet of the desert.'],['THE EXPERIENCE','Find your rhythm','Sunrise walks, mineral bathing, and dinners beneath an uninterrupted sky.']]
+const $=s=>document.querySelector(s),app=$('#app')
+const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches,fine=matchMedia('(hover:hover) and (pointer:fine)').matches
+let still=reduced,intro=0,loaded=false
+const words=(t,i)=>t.split(' ').map(w=>`<span class="w">${w} </span>`).join('')
+const story=(c,i)=>`<div class="story${still?' flow':''}" id="${c.id}"><div class="story-head"><div class="eyebrow"><span>${c.n}</span><i></i><span>${c.eb}</span></div>
+<${i?'h2':'h1'} class="h"><span class="l1">${words(c.l1)}</span><span class="l2">${words(c.l2)}</span></${i?'h2':'h1'}></div>
+<div class="story-copy"><p>${c.copy}</p>${c.x==='cta'?'<button class="cta" data-go="1" data-cursor="enter">Explore Serra &#8599;</button>':c.x==='cont'?'<button class="tl" data-go="2">The journey continues &#8595;</button>':c.x==='ret'?'<button class="tl" data-go="0">Return to the beginning &#8599;</button>':''}</div></div>`
+const cardsHTML=`<div class="cards" id="cards">${CARDS.map((k,i)=>`<div class="card-slot s${i}"><div class="card"><div class="card-tint"></div><div class="card-in"><div class="card-top"><span>${k[0]}</span></div><h3>${k[1]}</h3><p>${k[2]}</p></div></div></div>`).join('')}</div>`
+$('#cap').innerHTML=C.map((c,i)=>`<a href="#${c.id}" data-go="${i}">${c.label}</a>`).join('')
+$('#rail').innerHTML=C.map((c,i)=>`<button aria-label="${c.label}" data-go="${i}"><i></i></button>`).join('')
+$('#mnav').innerHTML=C.map((c,i)=>`<a href="#${c.id}" data-go="${i}" data-close><span class="num">0${i+1}</span><span class="tt"><b>${c.label}</b><small>${c.sub}</small></span>&#8599;</a>`).join('')
+let secs=[],q=[0,0,0,0],qt=[0,0,0,0],firstFrame=false,failed=false
+function build(){
+  document.body.classList.toggle('is-still',still)
+  if(still){
+    app.className='still';app.style.backgroundImage='linear-gradient(rgba(10,7,5,.62),rgba(10,7,5,.8)),url(media/section-4-poster.jpg)'
+    app.innerHTML=`<p class="note">${failed?'A quiet view. The film is unavailable on this connection.':'Stillness mode · Take the journey at your own pace.'}</p>`+[0,1,2].map(i=>story(C[i],i)).join('')+cardsHTML.replace('class="cards"','class="cards flow"')+story(C[3],3)
+    $('#rail').classList.add('hide');secs=[];$('#hdr').style.opacity=1;return}
+  $('#rail').classList.remove('hide');app.className='';app.style.backgroundImage=''
+  app.innerHTML=C.map((c,i)=>`<section class="journey" style="height:250svh"><div class="stage"><div class="scene" aria-hidden="true"><img class="scene-media" src="media/section-${i+1}-poster.jpg" alt=""><video class="scene-media" src="media/section-${i+1}.mp4" muted playsinline preload="${i?'metadata':'auto'}"></video><div class="shade"></div></div>
+  <div class="top-cap"><span>&#10039;</span> A SANCTUARY WITHIN STONE</div>${story(c,i)}${i===3?cardsHTML:''}${i===0?'<button class="scroll-cue" data-go="1">SCROLL TO DISCOVER<span>&#8595;</span></button>':''}<div class="progress"></div></div></section>`).join('')
+  secs=[...app.querySelectorAll('.journey')].map((el,i)=>{const v=el.querySelector('video');
+    const s={el,v,i,sty:el.querySelector('.story'),ws:[...el.querySelectorAll('.story .l1 .w')],ws2:[...el.querySelectorAll('.story .l2 .w')],eb:el.querySelector('.eyebrow'),cp:el.querySelector('.story-copy'),cap:el.querySelector('.top-cap'),cue:el.querySelector('.scroll-cue'),pr:el.querySelector('.progress')}
+    v.addEventListener('loadeddata',()=>{if(i===0)firstFrame=true});v.addEventListener('error',()=>{if(i===0){failed=true;still=true;build()}})
+    new IntersectionObserver(e=>{if(e[0].isIntersecting)v.preload='auto'},{rootMargin:'150% 0px'}).observe(el);return s})
+}
+function go(i){history.replaceState(null,'','#'+C[i].id)
+  if(still)return document.getElementById(C[i].id).scrollIntoView({behavior:reduced?'auto':'smooth'})
+  scrollTo({top:secs[i].el.offsetTop,behavior:'smooth'})}
+document.addEventListener('click',e=>{const t=e.target.closest('[data-go]');if(t){e.preventDefault();const i=+t.dataset.go;if(t.hasAttribute('data-close'))menu.close();setTimeout(()=>go(i),t.hasAttribute('data-close')?40:0)}
+  if(e.target.closest('[data-menu]')){opener=document.activeElement;menu.showModal();document.body.style.overflow='hidden'}})
+const menu=$('#menu');let opener=null
+const closeMenu=()=>{if(menu.open)menu.close()};$('#mclose').onclick=closeMenu
+menu.addEventListener('close',()=>{document.body.style.overflow='';opener&&opener.focus&&opener.focus()})
+$('#mstill').onclick=()=>{still=!still;failed=false;$('#mstill').textContent=still?'Enable cinematic journey':'Switch to stillness mode';closeMenu();build()}
+$('#skip').onclick=e=>{e.preventDefault();still=true;build();app.focus()}
+function words2(list,E,X,it){list.forEach((s,i)=>{const v=clamp((it?Math.max(0,E-.07):E)*1.35-i*.09);s.style.opacity=v*(1-X);s.style.filter=`blur(${(1-v)*7}px)`;s.style.transform=`translate3d(0,${(1-v)*26-X*16}px,0)`})}
+let t0=performance.now()
+function loop(n){requestAnimationFrame(loop);const dt=Math.min(100,n-t0);t0=n;if(document.hidden||still||!loaded)return
+  let act=0
+  secs.forEach(s=>{const r=s.el.getBoundingClientRect(),tg=clamp(-r.top/Math.max(1,s.el.offsetHeight-innerHeight))
+    q[s.i]+=(tg-q[s.i])*(1-Math.pow(.91,dt/16.667));if(Math.abs(q[s.i]-tg)<.0004)q[s.i]=tg
+    const Q=q[s.i];if(r.top<innerHeight/2&&r.bottom>innerHeight/2)act=s.i
+    const E=s.i===0?intro:smooth(.02,.16,Q),X=s.i===3?0:smooth(.84,.97,Q),on=E>.001&&X<.999
+    s.sty.style.visibility=on?'visible':'hidden';s.sty.style.pointerEvents=on?'auto':'none'
+    words2(s.ws,E,X);words2(s.ws2,E,X,true)
+    s.eb.style.opacity=E*(1-X);s.eb.style.transform=`translateY(${(1-E)*12-X*10}px)`
+    s.cp.style.opacity=clamp((E-.2)/.65)*(1-X);s.cp.style.transform=`translateY(${(1-E)*20-X*12}px)`;s.cp.style.filter=`blur(${(1-E)*3}px)`
+    s.cap.style.opacity=1-smooth(.12,.3,Q);if(s.cue)s.cue.style.opacity=1-smooth(.04,.3,Q)
+    s.pr.style.transform=`scaleX(${(q[0]+q[1]+q[2]+q[3])/4})`
+    if(s.i===3){const ce=smooth(.3,.5,Q),cd=$('#cards');cd.style.opacity=ce;cd.style.visibility=ce>0?'visible':'hidden';cd.style.transform=`translateY(${(1-ce)*28}px)`}
+    const v=s.v;if(v.duration&&!v.seeking&&v.readyState>=1){const tv=Q*Math.max(0,v.duration-.045);if(Math.abs(v.currentTime-tv)>1/24)v.currentTime=tv}})
+  document.querySelectorAll('.capsule a').forEach((a,i)=>{a.classList.toggle('on',i===act);i===act?a.setAttribute('aria-current','page'):a.removeAttribute('aria-current')})
+  document.querySelectorAll('.rail button').forEach((b,i)=>b.classList.toggle('on',i===act))}
+requestAnimationFrame(loop)
+// loader: weighted readiness (poster 30, fonts 10, first video frame 60), 12s deadline
+build()
+const L=$('#loader'),bar=$('#lbar'),pct=$('#lpct');let poster=false,font=false
+const im=new Image();im.onload=im.onerror=()=>poster=true;im.src='media/section-1-poster.jpg'
+;(document.fonts?document.fonts.ready:Promise.resolve()).then(()=>font=true)
+const start=performance.now();let revealed=false
+function check(){const p=still&&!loaded?100:(poster?30:0)+(font?10:0)+(firstFrame?60:0)
+  pct.textContent=Math.round(p)+'%';bar.style.transform=`scaleX(${p/100})`
+  if(p>=100||performance.now()-start>12000){if(performance.now()-start>12000&&p<100){failed=true;still=true;build()}reveal()}else setTimeout(check,100)}
+function reveal(){if(revealed)return;revealed=true;$('#llab').style.opacity=0;$('#hdr').style.transition='opacity .85s,transform .85s';$('#hdr').style.opacity=1
+  if(reduced||still){L.remove();loaded=true;intro=1;return}
+  const c=$('#lveil'),w=300,h=Math.max(1,Math.round(300*innerHeight/innerWidth));c.width=w;c.height=h;c.style.opacity=1;$('#lflat').classList.add('hide');bar.style.opacity=0
+  const x=c.getContext('2d'),img=x.createImageData(w,h),s=performance.now()
+  const f=n=>{const t=clamp((n-s)/1150),rad=t*1.25-.08
+    for(let y=0;y<h;y++)for(let X=0;X<w;X++){const nz=Math.sin(X*.041+y*.018)*.035+Math.sin(y*.095-X*.067)*.025+Math.sin(X*.27+y*.16)*.012
+      const d=Math.hypot(X/w-.51,(y/h-.43)*.83)+nz,e=d-rad,a=clamp(e/.065),rim=1-clamp(Math.abs(e)/.085),o=(y*w+X)*4
+      img.data[o]=169+rim*55;img.data[o+1]=132+rim*51;img.data[o+2]=107+rim*44;img.data[o+3]=a*255}
+    x.putImageData(img,0,0);if(t<1)requestAnimationFrame(f);else{L.remove();loaded=true;const s2=performance.now()
+      const g=m=>{intro=clamp((m-s2)/1100);if(intro<1)requestAnimationFrame(g)};requestAnimationFrame(g)
+      const i=C.findIndex(c=>'#'+c.id===location.hash);if(i>0)setTimeout(()=>go(i),50)}}
+  requestAnimationFrame(f)}
+check()
+// cursor
+if(fine&&!reduced){const cur=$('#cur'),dot=$('#dot'),ring=$('#ring');let X=-100,Y=-100,rx=-100,ry=-100,tt=performance.now()
+  addEventListener('pointermove',e=>{X=e.clientX;Y=e.clientY;cur.classList.add('on');const h=e.target.closest('a,button,select');ring.firstChild.className=h?'big':''})
+  document.addEventListener('pointerleave',()=>cur.classList.remove('on'))
+  const cl=n=>{requestAnimationFrame(cl);const a=1-Math.pow(.82,(n-tt)/16.667);tt=n;rx+=(X-rx)*a;ry+=(Y-ry)*a;dot.style.transform=`translate(${X}px,${Y}px)`;ring.style.transform=`translate(${rx}px,${ry}px)`;cur.style.display=(still||menu.open)?'none':'block'};requestAnimationFrame(cl)}
+})()
+</script></body></html>
