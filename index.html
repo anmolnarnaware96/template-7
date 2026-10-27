@@ -102,7 +102,7 @@ const PHONE="+910000000000" // <-- put your real number here (with country code)
 document.querySelectorAll("[data-book]").forEach(a=>a.href="tel:"+PHONE.replace(/[^+\d]/g,""))
 const clamp=(v,a=0,b=1)=>Math.max(a,Math.min(b,v)),smooth=(a,b,v)=>{const x=clamp((v-a)/(b-a));return x*x*(3-2*x)}
 const C=[
-{id:'the-place',n:'01',label:'The Doctors',eb:'Human Angles',l1:'Someone there.',l2:'Closer to yourself.',copy:'A secluded desert retreat shaped by sandstone, silence, and light. Space to slow down. Room to simply be.',sub:'A sanctuary within stone',x:'cta'},
+{id:'the-place',n:'01',label:'The Doctors',eb:'Human Angels',l1:'Someone there.',l2:'Closer to yourself.',copy:'A inclusive medical specialists guided by empathy, compassion and excellence. A abode of healing. Room to simply be.',sub:'A Healing and retreat centre',x:'cta'},
 {id:'the-stay',n:'02',label:'The Stay',eb:'INTO THE LANDSCAPE',l1:'Carved by time.',l2:'Made for stillness.',copy:'Follow the canyon inward to private stone suites, quiet pools, and open skies. Every detail belongs to the landscape.',sub:'Space to simply be',x:'cont'},
 {id:'experiences',n:'03',label:'Experiences',eb:'BEYOND THE EXPECTED',l1:'A little further.',l2:'A little quieter.',copy:'Beyond the water, the sanctuary unfolds. Follow the light into private spaces, warm stone, and a quieter kind of luxury.',sub:'Beyond the expected'},
 {id:'the-horizon',n:'04',label:'The Horizon',eb:'ROOM TO BREATHE',l1:'A world apart.',l2:'A place within.',copy:'The canyon opens. The horizon stretches. An intimate sanctuary, and a slower way to see the world.',sub:'A world opening up',x:'ret'}]
